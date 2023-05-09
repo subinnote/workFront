@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+</head>
+<body>
+    <h1>회원가입</h1>
+    <form>
+        <fieldset>
+            <legend>필수 입력 사항</legend>
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <td><input type="text" name="userId" id="userId" required
+                        maxlength='10' placeholder='아이디 10글자 이내'></td>
+                    <td><input type="button" value="중복확인"> </td>
+                </tr>
+                <tr>
+                    <th>비밀번호</th>
+                    <td><input type="password" name="userPw" id="userPw" required
+                        minlength='8' placeholder='영문, 숫자, 특수문자 포함 8자 이상'> </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>비밀번호 확인</th>
+                    <td><input type="password" name="userPwCheck" id="userPwCheck" required
+                        minlength='8' ></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>Email</th>
+                    <td><input type="email" name="email" id="email" required></td>
+                    <td>
+                        <select>
+                        <option value='none'>직접입력</option>
+                        <option value='naver'>naver.com</option>
+                        <option value='google'>gmail.com</option>
+                        </select>
+                    </td>
+                </tr>          
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend>추가 정보</legend>
+            프로필 사진 : <input type="file" name="uploadFile" id="uploadFile">
+            <p>성별 : 
+                <input type="radio" name="sex" id="M" checked>남자 
+                <input type="radio" name="sex" id="F">여자</p>
+            <p>생년월일 : <input type="date" name="" id=""></p>
+            <p>취미 : <br>
+            <input type="checkbox" name="hobby" id="baseball">
+            <input type="checkbox" name="hobby" id="basketball">
+            <input type="checkbox" name="hobby" id="football">
+            <input type="checkbox" name="hobby" id="baseball">
+            <input type="checkbox" name="hobby" id="baseball">
+            <input type="checkbox" name="hobby" id="baseball">
+        </p>
+        </fieldset>
+    </form>
+</body>
+</html>
