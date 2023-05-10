@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+ 
+#ff1{
+    font-family: "궁서체";
+}
+#ff2{
+    font-family: "굴림체";
+}
+/* 글꼴이 없는 경우를 대비해서 ,를 이용해서 여러글꼴을 나열 할 수 있음 */
+#ff3{
+    font-family: "없는글꼴", "궁서>ㅇ<", "고딕";
+}
+/* 웹폰트 */
+/* 구글폰트 */
+h1{
+    font-family: 'Gowun Dodum', sans-serif;
+}
+
+#size1{
+    font-size: 30px;
+}  
+#size2{
+    font-size: 2em;
+}    
+#size3{
+    font-size: 150%;
+}
+#fw1{
+    font-weight: bold;
+}
+#fw2{
+    font-weight: lighter;
+}
+#fw3{
+    font-weight: 900;
+}
+
+#fv{
+    /*small-caps : 소문자를 (소문자의 크기의)대문자로 바꿉니다
+      normal : 바꾸지 않음*/
+    font-variant: small-caps;
+}
+#fs1{
+    font-style: italic;
+}
+#fs2{
+    font-style: oblique;
+}
+/* 글자색 변경하기 
+    - 색상이름 표기법
+    - 16진수 표기법
+    - rgb/rgba 표기법
+    - hsl/hsla 표기법
+    */
+
+#c-name{
+    /*
+        이름으로 지정
+        웹 안전 색상
+        모든 웹브라우저에서 표현할 수 있는 색상
+        16가지 기본 색상을 포함 216가지
+        */
+    color: red;
+}
+#c-16{
+    /*
+        #과 16진수 6자리를 합쳐서 색상을 표현
+        앞에서부터 2자리씩 묶어 빨강, 초록, 파랑 색상의 양을 표시
+        (중복된 숫자인 경우 3자리로 표현가능 #000000 -> #000)    
+    */
+    color: #fff;
+    background-color: #000;
+}
+#c-rgb{
+    /*
+        빨강, 초록, 파랑 색상의 양을 0부터 255까지의 수로 표현
+    */
+    color: rgb(100,100,100);
+}
+#c-rgba{
+    /*
+        0: 투명도
+        0부터 1까지
+        0:투명, 1:불투명
+    */
+    /*
+        hsl방식
+        색상(hue), 채도(saturation), 밝기(light)
+    */
+    color: rgb(255,0,0,0.5);
+    background-color: hsla(56, 97%, 70%, 0.699);
+}
+
+#td-none{
+    text-decoration: none;
+}
+#td-underline{
+    text-decoration: underline;
+}
+#td-overline{
+    text-decoration: overline;
+}
+#td-line-through{
+    text-decoration: line-through;
+}
+a{
+    text-decoration: none;
+    color: #666;
+    font-size: 1.5em;
+}
+li{
+    padding: 20px;
+    border: 1px dotted #000;
+}
+
+#ts1{
+    font-weight: bold;
+    font-size: 1.5em;
+    text-shadow: 2px 2px 10px grey;
+    
+}
+#ts2{
+    font-weight: bold;
+    font-size: 1.5em;
+    text-shadow: -2px -2px 2px grey;
+}
+#ts3{
+    font-weight: bold;
+    font-size: 1em;
+    color: darkorange;
+    text-shadow: -1px -1px 5px black;
+    background-color: #589;
+}
+
+#tt1{
+    text-transform: none;   
+}
+#tt2{
+    text-transform: capitalize;   
+}
+#tt3{
+    text-transform: uppercase;   
+}
+#tt4{
+    text-transform: lowercase;   
+}
