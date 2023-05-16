@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹 구조만들기 실습</title>
+    <style>
+        *{
+            margin: 0px auto;
+            box-sizing: border-box;
+            list-style: none;
+            text-decoration: none;
+        }
+        .wrap{
+            width: 1000px;
+            height: 800px;
+        }
+        header .topSide{
+            border: 1px solid grey;
+            padding: 5px;
+        }
+        nav .menu{
+            border: 1px solid grey;
+            width: 100%;
+            height: 40px;  
+            padding: 0px;
+            text-align: center;
+            color: black;  
+            
+        }                        
+        nav .menu li{
+            border: 1px solid black;
+            display: inline-block;
+            width: 19%;
+            height: 40px;
+            line-height: 40px;                     
+        }
+        
+        nav .menu li a{
+            color: black;
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+        }
+        main #banner{
+            border: 1px solid black;
+            width: 750px;
+            height: 150px;
+            float: left;
+        }
+        main #leftSide{
+            border: 1px solid black;
+            width: 250px;
+            height: 500px;
+            float: left;
+        }
+        header #notice{
+            border: 1px solid black;
+            width: 750px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class='wrap'>
+        <header>
+            <div>
+                <div class='topSide'>
+                    <img src="image/logo.PNG" alt="">
+                </div>
+                <div>
+                    <ul id='notice'>
+                        <li>안녕하세요 여기는 공지사항 제목이 들어오는 자리입니다</li>
+                        <li>경제 연예 사회</li>
+                    </ul>                    
+                </div>
+            </div>
+            <nav>
+                <ul class='menu'>
+                    <li><a href="#">교육과정</a></li>
+                    <li><a href="#">교육원소개</a></li>
+                    <li><a href="#">취업지원센터</a></li>
+                    <li><a href="#">산학연계</a></li>
+                    <li><a href="#">상담센터</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div>
+                <div><img src="image/banner.PNG" alt="" id='banner'></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div id='leftSide'></div>
+        </main>
+        <footer>
+            <nav>
+                <ul class='footerMenu'>
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#">개인정보취급방침</a></li>
+                    <li><a href="#">인재채용</a></li>
+                    <li><a href="#">고객센터</a></li>
+                </ul>
+            </nav>
+            <div id='address'>
+                강남지원 1관: 서울특별시 강남구 테헤란로14길 6 남도빌딩 2F, 3F, 4F, 5F, 6F
+                강남지원 2관: 서울특별시 강남구 테헤란로10길 9 그랑프리 빌딩 4F, 5F, 7F
+                강남지원 3관: 서울특별시 강남구 테헤란로10길 130 호산빌딩 5F, 6F
+            </div>
+            <div id='copyright'>
+                Copyright ⓒ 1998-2020 KH Information Educational Institute All Right Reserved
+            </div>
+        </footer>
+    </div>
+</html>
