@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inch를 cm로 변환</title>
+</head>
+<body>
+    <button onclick='convertInchToCm()'>인치를 센치로 변환하기</button>
+
+    <div id='inch'></div>
+    
+    <script>
+        function convertInchToCm(){
+            var input = prompt('변환할 값을 입력해주세요(inch)');
+            var inch = Number(input)
+            var cm = inch*2.54;
+            alert(`${input} inch 는 ${cm}cm 입니다`);
+            console.log(cm);
+        }
+    </script>
+</body>
+</html>
