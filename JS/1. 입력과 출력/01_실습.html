@@ -10,7 +10,7 @@
             border: 1px solid;
             width: 100px;
             height: 100px;
-            background-color: black;
+            background-color: rgb(0,0,0);
         }
 
         #area {
@@ -40,32 +40,44 @@
     <div id="div1" class="div-test"></div>
     <input id="selectColor" type="color">
     <button onclick="changeColor();">변경</button>
-
+    
     <script>
         function changeColor(){
+            // # : 아이디 선택자, '' 안에 넣어 줍니다.
             var div1 = document.querySelector('#div1');
             var selectColor = document.querySelector('#selectColor');
-            // document.querySelector('#div1').style.background = selectColor;
-            console.log('div1', div1);
+            console.log('div1',div1);
             console.log('selectColor',selectColor);
             // div1.style : 엘리먼트의 Inline Css
             // div1.style.backgroundColor
-            //getComputedStyle(document.querySElector('#div1')).backgroundColor
-
-            // selectColor의 색상값을 변수에 저장
+            // getComputedStyle(document.querySelector('#div1')).backgroundColor
+            //  selectColor의 색상값을 변수에 저장
             var color = selectColor.value;
             var boxColor = getComputedStyle(div1).backgroundColor;
-            console.log(color);
-            console.log(boxColor);
+            // console.log(color);
+            // console.log(boxColor);
+
             // 1. 선택된 색상과 박스의 색상이 같다면 메세지 처리
-            // if(color==boxColor){
-            //     alert('선택된 색상과 박스의 색상이 같습니다.');
-            // } RGB랑 16진수로 나와서 일치시켜줘야함
+            var r = parseInt(color.substr(1,2),16);
+            var g = parseInt(color.substr(3,2),16);
+            var b = parseInt(color.substr(5,2),16);
+            var rgbColor = `rgb(${r}, ${g}, ${b})`;
+            console.log(rgbColor);
+            console.log(boxColor);
+
+            if(rgbColor == boxColor){
+                alert("같은 색상입니다.");
+            }else{
+                // 박스의 배경색상을 변경
+                div1.style.backgroundColor = color;
+            }
+
             // 2. 박스의 크기를 200*200으로 변경
-            div1.style.width = '200px';
-            div1.style.height = '200px';
+            div1.style.width='200px';
+            div1.style.height='200px';
             // 박스의 배경색상을 변경
             div1.style.backgroundColor = color;
+
 
         }
     </script>
@@ -81,22 +93,24 @@
     <button onclick="setSize('1');">50X50</button>
     <button onclick="setSize('2');">원본(100X100)</button>
     <button onclick="setSize('3');">200X200</button>
-    
+
     <script>
         function setSize(id){
+            var div2 = document.querySelector('#div2');
             if(id == '1'){
+                // 코드 작성
                 div2.style.width = '50px';
                 div2.style.height = '50px';
                 console.log(id);
-            }else if(id == '2'){
+            } else if(id == 2){
                 div2.style.width = '100px';
                 div2.style.height = '100px';
                 console.log(id);
-            }else if(id == '3'){
+            } else if (id == 3){
                 div2.style.width = '200px';
                 div2.style.height = '200px';
                 console.log(id);
-            }    
+            }
         }
     </script>
 
@@ -131,13 +145,14 @@
             var name = document.getElementsByTagName('input')[1].value;
             var pName = document.querySelector('#pName').value;
             var price = document.getElementsByName('price')[0].value;
-            console.log(`${name}, ${pName},${price}`);
-          
 
-            area.innerHTML = `${name}님 구매상품은 ${pName}, 구매가격은 ${price}원 입니다`;
+            console.log(`${name}, ${pName}, ${price}`);
+            console.log(name + ', ' + pName + ', '+ price);
+
+            area.innerHTML = `${name}님 구매상품은 ${pName}, 구매가격은 ${price}원 입니다.`;
         }
+
     </script>
-    
 
     <hr>
 
@@ -150,10 +165,11 @@
     <button onclick="makeTable();">테이블 생성</button>
 
     <div id="div3" style="margin-top: 10px;"></div>
+
     <script>
-        // 함수생성
-        // 사용자로부터 입력받습니다
-        // 행의 갯수, 열의 갯수
+        // 함수 생성
+        // 사용자로부터 입력 받습니다
+        // 행의갯수, 열의 갯수
         // 콘솔창에 출력
         function makeTable(){
 
@@ -162,30 +178,31 @@
 
             var table = '<table border="1">';
             
-            for(var j=0; j<row; j++){
-                table += '<tr>';
-                    for(var i=0; i<col; i++){
-                        table += `<td>컬럼${j+1}-${i+1}`;
-                        table += '</td>';
-                    }
-            table += '</tr>';
+            for(var j = 0; j < row; j++){
+                table += '<tr>'; 
+                // 행 반복
+                for(var i=0; i < col; i++){
+                    table += `<td>${j}-${i}`;
+                    table += '</td>';
+                }
+                table += '</tr>';
             }
+
             table += '</table>';
             
             document.querySelector('#div3').innerHTML=table;
         }
-        
-    </script>
 
-    <hr>
-    <table border='1'>
+    </script>
+    
+    <!-- <table border='1'>
         <tr>
             <td>컬럼1</td>
             <td>컬럼2</td>
             <td>컬럼3</td>
+            <td>컬럼4</td>
         </tr>
-    </table>
-
+    </table> -->
 
     <br><br><br><br><br><br>
     <br><br><br><br><br><br>

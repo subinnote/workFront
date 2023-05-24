@@ -4,6 +4,6 @@ function external(){
     console.log('result', result);
 }
 
-function add(x,y){
-    return x+y;
+function add(x, y){
+    return x + y;
 }
