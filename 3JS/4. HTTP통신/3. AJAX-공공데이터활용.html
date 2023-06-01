@@ -27,6 +27,7 @@
                 // 객체로 변환
                 let jsObj = JSON.parse(xhr.responseText);
                 console.log(jsObj);
+                
                 let itemArr = jsObj.response.body.items.item;
 
                 let resDiv = document.querySelector('#result');

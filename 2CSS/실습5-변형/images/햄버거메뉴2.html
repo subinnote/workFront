@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+            text-decoration: none;
+        }
+        .icon{
+            width: 70px;
+            height: 70px;
+            background-color: darkgray;
+            position: relative;
+        }
+        .icon p{
+            width: 100%;
+            height: 15px;
+            background-color: gray;
+            border-radius: 25px;
+            position: absolute;
+        }
+        .icon p:first-child{
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .icon p:last-child{
+            top: 0%;
+            transform: translateY(180%) rotate(90deg);
+        }
+
+        .icon:hover p:first-child{
+            top: 50%;
+            transform: translateY(-50%) rotate(45deg);
+        }
+        .icon:hover p:last-child{
+            top: 50%;
+            transform: translateY(-50%) rotate(-45deg);
+        }
+
+        /* 메뉴 */
+        nav{
+            width: 70px;
+            height: 200px;
+            background-color: gainsboro;
+            position: absolute;
+            left: -70px;
+            transition: 0.5s;
+        }
+        nav ul li{
+            width: 100%;
+            height: 25%;
+            border-left: 3px solid rgba(0, 0, 0, 0.616);
+            line-height: 49px;
+        }
+        nav ul li a{
+            display: inline-block;
+            width: 100%;
+            height: 25%;
+            text-align: center;
+            font-size: small;
+            font-weight: bold;
+        }
+        nav ul li a:hover{
+            background-color: aliceblue;
+        }
+        .left_icon:hover nav{
+            left: 0px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class='left_icon'>
+            <div class='icon'>
+                <p></p>
+                <p></p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="">세트메뉴</a></li>
+                    <li><a href="">단품메뉴</a></li>
+                    <li><a href="">디저트</a></li>
+                    <li><a href="">음료</a></li>
+                </ul>
+            </nav>
+        </div>
+        </header>
+</body>
+</html>

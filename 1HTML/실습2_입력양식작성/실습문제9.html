@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+         *{
+            /* color: cyan; */
+            list-style: none;
+        }
+    </style>
+    <title>회원가입</title>
+</head>
+<body>
+    <h1>회원가입</h1>
+    <form>
+        <fieldset>
+            <legend>필수 입력 사항</legend>
+            <table>
+                <tr>
+                    <!-- for=연결해 줄 요소의 id값 -->
+                    <th><label for='userId'> ID</label></th>
+                    <td><input type="text" name="userId" id="userId" required
+                        maxlength='10' placeholder='아이디 10글자 이내'></td>
+                    <td><input type="button" value="중복확인"> </td>
+                </tr>
+                <tr>
+                    <th><label for='userPw'>비밀번호</label></th>
+                    <td><input type="password" name="userPw" id="userPw" required
+                        minlength='8' placeholder='영문, 숫자, 특수문자 포함 8자 이상'> </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th><label for='pwCheck'>비밀번호 확인</label></th>
+                    <td><input type="password" name="pwCheck" id="pwCheck" required
+                        minlength='8' ></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th><label for='email'>Email</label></th>
+                    <td><input type="email" name="email" id="email" required></td>
+                    <td>
+                        <select>
+                        <option value='none' selected>직접입력</option>
+                        <option value='naver'>naver.com</option>
+                        <option value='google'>gmail.com</option>
+                        </select>
+                    </td>
+                </tr>          
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend>추가 정보</legend>
+            <ul>
+                <li>            
+                    <label for='uploadFile'>프로필 사진 :</label> 
+                    <input type="file" name="uploadFile" id="uploadFile">
+                </li>
+                <li>
+                    <p><label for='gender'>성별 :</label> 
+                    <input type="radio" name="gender" id="gender" value='M' checked>남자 
+                    <input type="radio" name="gender" id="gender" value='F'>여자</p>
+                </li>
+                <li>
+                    <p><label for='birth'>생년월일 :</label>
+                    <input type="date" name="birth" id="birth"></p>
+                </li>
+                <li>
+                    <p>취미 : <br> <!--label은 id값과 동일하게 주는거임-->
+                    <input type="checkbox" name="hobby" id="baseball"><label for='baseball'>야구</label>
+                    <input type="checkbox" name="hobby" id="basketball"><label for='basketball'>농구</label>
+                    <input type="checkbox" name="hobby" id="football"><label for='football'>축구</label> <br>
+                    <input type="checkbox" name="hobby" id="study" checked><label for='study'>공부</label>
+                    <label><input type="checkbox" name="hobby" id="music">음악감상</label> <br> <!--label 이 방식으로도 가능-->
+                    <input type="checkbox" name="hobby" id="etc"><label for='etc'>기타 :</label> 
+                    <input type="text" name="hobby" id="etc">
+                    </p>
+                </li>
+                <li>
+                    <p><label for='introduce'></label>자기소개<br>
+                    <textarea name='introduce' id='introduce' cols='50' rows='5' style='resize:none;'></textarea>
+                    </p>
+                </li>
+            </ul>
+        </fieldset>        
+    </form>
+</body>
+</html>

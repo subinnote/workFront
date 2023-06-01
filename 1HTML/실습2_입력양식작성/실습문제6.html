@@ -18,10 +18,33 @@
   </head>
   <body>
 		<div id="container">
-			프런트엔드 개발자 지원서
-			
+			<h1><b>프런트엔드 개발자 지원서</b></h1>
+			HTML, CSS Javascript에 대한 기술적 이해와 경험이 있는 분을 찾습니다.
+			<hr>
 			<form>
-				
+				<p>
+				<legend>개인정보</legend>
+				<ul>
+					<li>이름 <input type="text" name="name" id="name" placeholder='공백없이 입력하세요'></li>
+					<li>연락처 <input type="tell" name="phoneNum" id="phoneNum"></li>
+				</ul>
+				</p>
+				<p>
+				<legend>지원 분야</legend>
+					<ul>
+					<li><input type="radio" name="applyField" value="pb">웹퍼블리싱</li>
+					<li><input type="radio" name="applyField" value="pp">웹 애플리케이션 개발</li>		
+					<li><input type="radio" name="applyField" value="pc">개발 환경 개선</li>
+					</ul>	
+				</p>
+				<p>
+				<legend>지원동기</legend>
+				<br>
+				<textarea id='motive' name='motive' cols='70' rows='4' placeholder='본사 지원 동기를 간략히 써 주세요.'></textarea>
+				<input type="submit" value="접수하기">
+				<input type="reset" value="다시 쓰기">
+				</p>
+			
 			</form>
 		</div>
   </body>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0px auto;
+        }
+        .box{
+            margin-top: 20px;
+            width: 1600px;
+            height: 900px;
+            border: 1px solid black;
+        }
+
+        header{
+            width: auto;
+            border: 1px solid black;
+            height: 200px;
+        }
+        main{
+            width: auto;
+            border: 1px solid black;
+            height: 600px;
+        }
+        footer{
+            width: auto;
+            border: 1px solid black;
+            height: 100px;
+        }
+        header nav:last-child{
+            width: auto;
+            height: 20px;
+            background-color: aqua;
+        }
+        
+        
+        header #logo{
+            width: 400px;
+            height: 180px;
+            background: url(../images/mic.png) no-repeat center center;
+            float: left;
+        }
+        header #title{
+            width: 1190px;
+            height: 180px;
+            font-size: 100px;
+            float: left;
+            
+        }
+        
+        header ul{
+            list-style: none;
+        }
+        header li{
+            display: inline-block;
+        }
+        header li a{
+            display: inline-block;
+            width: 200px;
+            height: auto;
+            border: 1px solid black;
+
+}
+
+
+    </style>
+</head>
+<body>
+    <div class='box'>
+        <header>
+            <div>
+                <div id='logo'></div>
+                <nav id='title'>GO GREEN</nav>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Profile</a></li>
+                    <li><a href="">Board</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <aside></aside>
+            <section></section>
+            <aside></aside>
+        </main>
+
+        <footer>
+
+        </footer>
+    </div>
+</body>
+</html>
